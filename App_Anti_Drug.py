@@ -4,7 +4,6 @@ import pyreadstat
 import os
 import datetime
 import gspread
-import json
 from google.oauth2.service_account import Credentials
 
 # Initial Understanding Section
@@ -62,9 +61,8 @@ if sex_response_2:
 
 # Google Sheets Authentication and Saving
 def authenticate_gsheets():
-    # Load credentials from Streamlit secrets
-    creds_dict = json.loads(st.secrets["gcp_service_account"])
-    creds = Credentials.from_service_account_info(creds_dict)
+    # Use the credentials directly from Streamlit secrets
+    creds = Credentials.from_service_account_info(st.secrets["gcp_service_account"])
     
     # Authorize with Google Sheets API
     client = gspread.authorize(creds)
