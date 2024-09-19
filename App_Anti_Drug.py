@@ -4,7 +4,8 @@ import pyreadstat
 import os
 import datetime
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+import json
+from google.oauth2.service_account import Credentials
 
 # Initial Understanding Section
 st.subheader("Initial Understanding:")
@@ -61,10 +62,11 @@ if sex_response_2:
 
 # Google Sheets Authentication and Saving
 def authenticate_gsheets():
-    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+    # Load credentials from Streamlit secrets
+    creds_dict = json.loads(st.secrets["gcp_service_account"])
+    creds = Credentials.from_service_account_info(creds_dict)
     
-    # Provide the path to your JSON credentials file
-    creds = ServiceAccountCredentials.from_json_keyfile_name("projecteda-e3e26b98a8a7.json", scope)
+    # Authorize with Google Sheets API
     client = gspread.authorize(creds)
     
     # Open the Google Sheet (replace 'Your Spreadsheet Name' with the actual sheet name)
@@ -83,10 +85,10 @@ def save_responses_to_gsheets(sheet, immune_response1, visit_duration_response1,
     sheet.append_row(data)
     
     # Display success message in Streamlit
-    st.success("Responses saved to Excel file")
+    st.success("Responses saved to Google Sheets")
 
 # Button to save all responses
-if st.button('Save All Responses to Excel file'):
+if st.button('Save All Responses to Google Sheets'):
     # Authenticate with Google Sheets API
     sheet = authenticate_gsheets()
     
