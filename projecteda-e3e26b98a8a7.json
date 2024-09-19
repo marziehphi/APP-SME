@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "projecteda",
+  "private_key_id": "e3e26b98a8a75fcc3fcdd890a754e920dcf3797f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCx2RjlFbzZs1b3\nicNpUf55MlxaIjrfbg6YtZqRNZkjxwiF3YEekPVxhG+hoZY9bOuwDgRWu4LuiH8y\nairT78Qs0UnJT08f2uZaiZrtqog3ApD20WLWB0GrpMlUhHARMTn0dmIG0vSIXlJr\n8GzF9zRFPcv3s0rpDWAiqjXPuI/AaTb222edDjpBPw8hVX11C6CqR+8X0sdD8NTE\nKfl29rJ+pBa4//f5wYCTXif+uuPwgMn9Sry1hQem1GkFYPlaNrOi7bPQBFvNqmnu\nwimdq5Yugvyc21RldEG5UbRnLueL5T6R0eyFE8nZH9fmn5tfDhxbnUxO3E0cIJ1b\nLgil8KetAgMBAAECggEAAXmkt56HvUgiVbwYzAwLQx1Kn5zFEqSRDm2cy80lnG+P\nZiNBabixShdbh0jioooyvxHlGB5G2b+o5NXCNGI6vrxsEw7+jJ8XzHLaJbqFlewG\nU8ws0hja6WRc6/LyEwWh6DsxjCjxY+gt+tZsFvN6Xx11TnRFD/9oze2as9xhPne3\nAkIKhRr156DdBPhw6V4HzOSNirRvmJUIKPxG7BPITZYSTbuxOCYWR6H9Aldyj+Lb\no16XJNSPnw071Y5MTid30koJKsiYLhcDqColj2f3ZDjIDadG5c04az5wVIt7vcHm\nTpRFr9/ALN7F6xkUH5wQdg6OnKRtyxnlalwYF96ugQKBgQDZcL942DQXSC8VKEPG\nhKF2QIdtwyjJmLhmgRyv+W0/BCoXdJy6lTVO4Tt/u3Wwdu3NMvMgAd05A9LpHegu\nlkjWWGQlSOJJG6xw5ACUgKYdbG305QdcFmKZvSL48N+A/UaprG2kdkvJI2HoTfpt\nZeXljuOcIr4tIR1TnmIwnLFXkQKBgQDRYvQyO2U+851UGAc4oWtPpy8Qd7ZIKYMN\nzm5X1Auga5tkI5zPdRMOadyoG38r4ILSrQliM7NGD0t9ddH1UC+eTN1zZJWoUYwg\nO9NrUQwQ4CP4cYDTcdzOwoNTBD5P7tv2D1CQs38UMmAhk3dlB/M/aGhfXDpdPCXk\n1kTxe8pYXQKBgHh7yvzQ//wumTgl+XgUocr+coxVaVJbd0IFJLo1gV07l38rtHSG\nnOU6VFewrcO8AoSDSMhhgA1JmyJk2fSGfZGXpNYsDobn+KMNE20149XF8R+TkIJs\nPPJnJOu/vHii3vbBfnd0vQWUv3mTS8I2hi6vAFvRvIMRKEjfKBU7neChAoGANw7v\nKXpG0DvdBezfkTuY7TQIAyuHaghIZsv+ZefjOsaw8K8Qn9ioLyUVGbtJQG9j1yQb\nEJCJtoV1E0N09y2jp9uMa7hqRf1TfHJe0JxaMOHPc5fdCTyqlE+/mofGHtyvSE+U\nnsgkRVpNvuZ5Ab8KboT01QZ6bmPPjxHsxRcJCR0CgYBy0IHalEdJPecgB6FA51Eh\n2twtLEgEZguCeDxt3Gzg6vnIe8bE9YgoRUIDVHl8ryE2tn8sv19zYLg/IHyeHeVb\nyr9gQKW1pBhKkrMcEUvpWTIc8Z1v04xj3QmEFLNq62f3UHdRWVjtqgih2/JF8YYZ\nBa3i/m/lxxDFy2zAaZi4cw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "eda-2024@projecteda.iam.gserviceaccount.com",
+  "client_id": "115501399569406846692",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/eda-2024%40projecteda.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
