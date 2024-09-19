@@ -24,7 +24,7 @@ st.image('plots/treatment.png', use_column_width=True)
 
 st.subheader("Questions for SME (Immune and ADA Response):")
 st.write("1. What is the clinical or biological significance of the relationship between the presence of different antibodies (e.g., IgG, IgE, Neutralizing Antibodies) and ADA status (Positive/Negative), and how should this relationship guide model development?")
-immune_response_1 = st.text_area("Response to Immune Response Question 1", key="immune_response1_unique")  # Updated key
+immune_response_1 = st.text_area("Response to Immune Response Question 1", key="immune_response1_unique")
 if immune_response_1:
     st.write(f"**Response to Question 1:** {immune_response_1}")
 
@@ -34,12 +34,12 @@ st.image('plots/Visiting - Duration.png', use_column_width=True)
 
 st.subheader("Questions for SME (Visit Duration):")
 st.write("1. Why are there duplicate SUBJID (Patient record) for each AVISIT (visit)? Could it be due to multiple visits or assessments for the same subject within the same AVISIT period?")
-visit_duration_response_1 = st.text_area("Response to Visit Duration Question 1", key="visit_duration_response1_unique")  # Updated key
+visit_duration_response_1 = st.text_area("Response to Visit Duration Question 1", key="visit_duration_response1_unique")
 if visit_duration_response_1:
     st.write(f"**Response to Question 1:** {visit_duration_response_1}")
 
 st.write("2. How should I treat these duplicates?")
-visit_duration_response_2 = st.text_area("Response to Visit Duration Question 2", key="visit_duration_response2_unique")  # Updated key
+visit_duration_response_2 = st.text_area("Response to Visit Duration Question 2", key="visit_duration_response2_unique")
 if visit_duration_response_2:
     st.write(f"**Response to Question 2:** {visit_duration_response_2}")
 
@@ -50,19 +50,22 @@ st.image('plots/Baseline.png', use_column_width=True)
 
 st.subheader("Questions for SME (Sex, Fabry Classification):")
 st.write("1. Does This Gender Imbalance Affect the Generalizability of the Results?")
-sex_response_1 = st.text_area("Response to SEX, Fabry Disease Classification 1", key="sex_response1_unique")  # Updated key
+sex_response_1 = st.text_area("Response to SEX, Fabry Disease Classification 1", key="sex_response1_unique")
 if sex_response_1:
     st.write(f"**Response to Question 1:** {sex_response_1}")
 
 st.write("2. What is the difference between Classical Vs Non-classical Fabry?")
-sex_response_2 = st.text_area("Response to SEX, Fabry Disease Classification 2", key="sex_response2_unique")  # Updated key
+sex_response_2 = st.text_area("Response to SEX, Fabry Disease Classification 2", key="sex_response2_unique")
 if sex_response_2:
     st.write(f"**Response to Question 2:** {sex_response_2}")
 
 # Google Sheets Authentication and Saving
 def authenticate_gsheets():
-    # Use the credentials directly from Streamlit secrets
-    creds = Credentials.from_service_account_info(st.secrets["gcp_service_account"])
+    # Use the correct OAuth scopes for Google Sheets and Drive API
+    scopes = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
+    
+    # Load credentials from Streamlit secrets
+    creds = Credentials.from_service_account_info(st.secrets["gcp_service_account"], scopes=scopes)
     
     # Authorize with Google Sheets API
     client = gspread.authorize(creds)
